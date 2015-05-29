@@ -6,7 +6,7 @@
         <license>Apache 2.0</license>
         <keywords>cordova,device</keywords>
         <js-module src="www/echo.js" name="echo">
-            <clobbers target="echo" />
+            <clobbers target="window.echo" />
         </js-module>
         <platform name="android">
         <config-file target="config.xml" parent="/*">
@@ -14,6 +14,6 @@
                 <param name="android-package" value="org.apache.cordova.plugin.Echo"/>
             </feature>
         </config-file>
-		<source-file src="src/org/apache/cordova/plugin/Echo.java" />
+		<source-file src="src/org/apache/cordova/plugin/Echo.java" target-dir="src/org/apache/cordova/plugin/" />
     </platform>
     </plugin>
